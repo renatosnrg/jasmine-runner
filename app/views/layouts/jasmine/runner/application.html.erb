@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jasmine Specs Suite</title>
+
+    <% @config.css_files.each do |filename| %>
+      <link rel="stylesheet" href="/assets/<%= filename %>" type="text/css">
+    <% end %>
+
+    <% @config.js_files.each do |filename| %>
+      <script type="text/javascript" src="/assets/<%= filename %>"></script>
+    <% end %>
+
+    <% @config.src_files.each do |filename| %>
+      <script type="text/javascript" src="/<%= filename %>"></script>
+    <% end %>
+
+    <% @config.spec_files.each do |filename| %>
+      <script type="text/javascript" src="/assets/<%= filename %>"></script>
+    <% end %>
+
+    <script type="text/javascript" src="/assets/jasmine_runner.js"></script>
+
+    <%= yield :head %>
+  </head>
+
+  <body>
+  </body>
+</html>

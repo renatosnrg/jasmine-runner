@@ -1,0 +1,11 @@
+<% content_for :head do %>
+
+  <script type="text/javascript" src="/assets/reporters/jasmine.teamcity_reporter.js"></script>
+
+  <script>
+    var htmlReporter = new jasmine.HtmlReporter();
+    var teamcityReporter = new jasmine.TeamcityReporter();
+    jasmineRunner([htmlReporter, teamcityReporter]);
+  </script>
+
+<% end %>
